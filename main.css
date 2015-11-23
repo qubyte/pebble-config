@@ -1,0 +1,40 @@
+form {
+  margin: 0 auto;
+  width: 400px;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  padding-right: 5px;
+}
+
+input {
+  width: 300px;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:valid {
+  border: 1px solid green;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+}
+
+.button-container {
+  padding-left: 90px;
+}
+
+button {
+  margin-left: .5em;
+}
