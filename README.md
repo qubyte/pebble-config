@@ -11,8 +11,8 @@ A form definition is an array of objects, for example:
 ```javascript
 var formDef = [
   { name: 'birthday', type: 'date' }, // name is mandatory, type defaults to text.
-  { name: 'length of a piece of string', type 'number', min: 0 } // Validations!
-  { name: 'tweet', type: 'text', maxlength: 140 },
+  { name: 'length of a piece of string', type: 'number', min: 0 }, // Validations!
+  { name: 'tweet', type: 'text', maxLength: 140 },
   { name: 'address', type: 'email', required: true }
 ];
 ```
