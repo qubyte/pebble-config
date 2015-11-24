@@ -4,7 +4,7 @@
   // Used for validation.
   var canHavePattern = ['text', 'search', 'url', 'tel', 'email', 'password'];
   var canHaveMinMaxStep = ['range', 'number', 'date', 'month', 'week', 'datetime', 'datetime-local', 'time'];
-  var canHaveMaxlength = ['text', 'search', 'url', 'tel', 'email', 'password'];
+  var canHaveMaxLength = ['text', 'search', 'url', 'tel', 'email', 'password'];
 
   // Hunt for the form-definition query parameter and decode and parse it.
   var formDefinition = (function () {
@@ -60,8 +60,8 @@
       }
     }
 
-    if (canHaveMaxlength.indexOf(type) !== -1 && formItem.step > 0) {
-      $input.maxlength = formItem.maxlength;
+    if (canHaveMaxLength.indexOf(type) !== -1 && formItem.maxLength > 0) {
+      $input.maxLength = formItem.maxLength;
     }
 
     $container.appendChild($label);
