@@ -33,13 +33,18 @@
     var $input = document.createElement('input');
 
     var inputId = 'form-item-' + index;
-    var type = (formItem.type || 'text').trim().toLowerCase();
+    var type = formItem.type || 'text';
+    var name = formItem.name;
+
+    if (!name) {
+      throw new Error('Fields must have a "name" property.');
+    }
 
     $label.htmlFor = inputId;
-    $label.textContent = formItem.name;
+    $label.textContent = name;
     $input.id = inputId;
     $input.type = formItem.type;
-    $input.dataset.name = formItem.name;
+    $input.dataset.name = name;
     $input.required = !!formItem.required;
 
     if (canHavePattern.indexOf(type) !== -1 && typeof formItem.pattern === 'string') {
