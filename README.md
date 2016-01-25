@@ -54,9 +54,3 @@ Config is an object containing name-value pairs. You'll need to do any parsing o
 ## Why encode this way?
 
 This way makes it possible to define forms with validations in an easy way. With query parameters alone, it'd be a lot trickier, and far harder to construct URLs. The one drawback is that the maximum URL length supported by browsers is ~2000 characters, and it's not very difficult to hit that. It's unlikely that any useful form will need to be that complex however.
-
-## Contributing
-
-Please contribute! All interactions on this repository are governed by the [Contributor Covenant](CODE_OF_CONDUCT). If you use pebble-config, them please tweet to me @qubyte!.
-
-The site itself is hosted by GitHub. To make changes, clone this repository, and make a new branch off of the `gh-pages` branch.
